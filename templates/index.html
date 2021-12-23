@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Retention</title>
+</head>
+<body>
+    <h1>Predict your Employee Probability to Leave the Org</h1>
+    <p>
+        Enter your Employee details:
+    </p>
+
+    <form action="/" method="POST">
+        <input type="number"  step=".01" name="satisfaction_level" placeholder="Satisfaction Level(out of 1)"/>
+        <input type="number" step=".01" name="last_evaluation" placeholder="Last Evaluation(out of 1)"/>
+        <input type="number" name="number_project" placeholder="Number of Projects"/>
+        <input type="number" name="average_montly_hours" placeholder="Average Monthly Hours"/>
+        <input type="number" name="time_spend_company" placeholder="Time Spend in Company(years)"/>
+        <input type="number" name="Work_accident" placeholder="Had a Work Accident(1 if true)"/>
+        <input type="number" name="promotion_last_5years" placeholder="Had Promotion in Last 5 Years(1 if true)"/>
+        <input type="number" name="low" placeholder="Low Salary(1 if true)"/>
+        <input type="number" name="medium" placeholder="Medium Salary(1 if true)"/>        
+        
+        <input type="submit"/>
+    </form>
+    {% if prediction == 0 %}
+        <p> Your Employee is not going to leave </p>
+    {% elif prediciton == 1 %}
+        <p> Your Employee is going to leave </p>
+    {% endif %}
+</body>
+</html>
