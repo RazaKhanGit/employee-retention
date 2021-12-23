@@ -13,7 +13,8 @@ def hello():
             # print(type(request.form[i]))
             predict_data.append(float(request.form[i]))
         willLeave = predicitons.make_predictions(predict_data)
-    return render_template('index.html', prediction = willLeave)
+        return render_template('index.html', prediction = willLeave)
+    return render_template('index.html')
 
 # @app.route("/sub", methods=['POST'])
 # def sub():
@@ -26,4 +27,4 @@ def hello():
 #     return render_template('sub.html', n=name)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
